@@ -1,0 +1,617 @@
+:root {
+    --mainColor: #260433;
+    --secondaryColor: #2f053f;
+
+    --lightColor: #a911e5;
+
+    --mainText:  #d9d4da;
+    --secondaryText: #b5abb6;
+
+    --darkColor: #130219;
+
+}
+
+body * {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    box-sizing: border-box;
+  }
+
+html, body {
+    padding: 0; //distance between border & inside element
+    margin: 0; // distance between border & outside element
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--mainText);
+    font-family: NTR;
+    margin: 0;
+}
+
+p, li, label, input, textarea {
+    color: var(--secondaryText);
+    font-family: NTR;
+    font-size: 1.125rem; //1 rem = 1 default (16) px
+}
+
+p {
+    margin:0;
+    margin-bottom: 1rem; 
+    line-height: 1.875rem;
+}
+
+a {
+    font-family: NTR;
+    font-size: 1.125rem;
+    text-decoration: none;
+    color: var(--lightColor);
+}
+
+a:hover {
+    color: var(--mainText);
+}
+
+ul {
+    list-style: none;
+}
+
+h1 { font-size: 4.75rem;}
+h2 { font-size: 2.125rem;}
+h3 { font-size: 1.625rem;}
+h4 { font-size: 1.5rem;}
+h5 { font-size: 1.2rem;}
+h6 { font-size: 1.125rem;}
+
+::-moz-selection {
+    background: #462c49;
+}
+
+::selection {
+    background: #462c49;
+}
+
+.section-tittle{
+    text-align: center;
+}
+
+.s1 {
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--lightColor);
+    overflow: auto;
+}
+
+.s2 {
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--lightColor);
+    overflow: auto;
+}
+
+#footer {
+    border-bottom: none;
+}
+
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.mobile-navigation {
+    display: none;
+} 
+.greeting-wrapper{
+    display: grid;
+    min-height: 8em;
+    text-align: center;
+    align-content: center;
+    
+    h1 {
+        color: var(--mainText);
+        font-weight: lighter;
+    }
+
+    span {
+        color: var(--lightColor);
+        font-weight: bold;
+    }
+
+    #cursor { // edit
+        animation: blink 0.9s infinite;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        @keyframes blink {
+            from { opacity: 1; }
+            to { opacity: 0; }
+          }  
+    }
+}
+
+.intro-wrapper {
+    -webkit-box-shadow: -1px 10px 30px -1px rgba(0, 0, 0, 0.01);
+    -moz-box-shadow: -1px 10px 30px -1px rgba(0, 0, 0, 0.01);
+    box-shadow: -1px 10px 30px -1px rgba(0, 0, 0, 0.01);
+    
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--lightColor);
+    border-bottom: none;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    'nav-wrapper nav-wrapper'
+    'left-col right-col'
+    ;
+}
+
+.nav-wrapper{
+    grid-area: nav-wrapper;
+    border-bottom: 1px solid var(--lightColor);
+    background-color: var(--mainColor);    
+    display: flex; //to make justify, align easier which is FLEXible (default: horizonal)
+    justify-content: space-between; //separate items with the max space
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+}
+
+.title-wrapper {
+    margin:0;
+    padding:0;
+    padding-left:20px;
+}
+
+.web-navigation {
+    display: flex; //to make it horizontal
+    padding-right: 20px;
+    li {
+        //display: inline-block; 
+        margin-left: 20px;
+        margin-left: 20px;
+        letter-spacing: 2px;
+    }
+}
+
+.hamburger {
+    display: none; //hide the hamburger menu on the non-mobile screen
+}
+
+.left-col{
+    grid-area: left-col;
+    text-align: center;
+    padding: 50px 0;  //top+bottom left+right
+}
+
+#profile-pic{
+    display: block;
+    margin:auto;
+    height: 275px;
+    width: 275px;
+    object-fit: cover;
+    border: 2px solid var(--lightColor);
+    border-radius: 8px;
+    background-color: var(--mainColor);
+
+    -webkit-box-shadow: inset 0px 0px 5px -1px rgba(169,17,229,0.8);
+    -moz-box-shadow: inset 0px 0px 5px -1px rgba(169,17,229,0.8);
+    box-shadow: inset 0px 0px 5px -1px rgba(169,17,229,0.8);
+}
+
+#profile-pic:hover{
+    transform: translateY(-5px);
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    filter: invert(1); //to change black to white icon
+    li {
+        margin-left: 5px;
+        margin-right: 5px;
+
+        img {
+            height: 25px;
+            width: 25px;
+            opacity:75%;
+        }
+
+        a :hover {
+            opacity: 100%;
+        }
+    }
+}
+
+#first-icon {
+    justify-content: center;
+    padding: 0;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+#second-icon {
+    padding:0;
+    margin:0;
+    margin-bottom: 20px;
+    li {
+        margin-left: 0px;
+        margin-right: 20px;
+    }
+}
+
+.say-hello {
+    display: inline-block; //a default display is inline so we can't change margin
+    background-color: var(--darkColor);
+    color: var(--mainText);
+    border-radius: 50px;
+    padding: 0 30px;
+    margin: 0;
+    font-size: 1.375rem;
+}
+
+.say-hello:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    color: var(--mainText);
+    //border: 1px solid var(--lightColor);
+}
+
+.right-col{
+    grid-area: right-col;
+    display: grid;
+    align-content: center;
+    padding: 50px 50px 50px 0; //top right bottom left
+    //max-width: 600px; limit the width
+
+    h3 {
+        margin:0;
+        margin-bottom: 6px;
+    }
+
+    .skills {
+        display: flex;
+        justify-content: space-evenly; //separate items with same space
+        background-color: var(--darkColor);
+        border-radius: 8px;
+        ul {
+            margin: 15px;
+            list-style: none;
+        }
+        li {
+            margin:0;
+            color: var(--mainText);
+        }
+        ul li::before {
+            content: "\2023";  /* Add content: \2023 is the CSS Code/unicode for a triangle */
+            color: var(--lightColor); /* Change the color */
+            font-weight: bold; /* If you want it to be bold */
+            display: inline-block; /* Needed to add space between the triangle and the text */
+            width: 1em; /* Also needed for space (tweak if needed) */
+            margin-left: -1em; /* Also needed for space (tweak if needed) */
+          }
+    }
+}
+
+.experience-wrapper {
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 
+    'selection experience-desc';
+
+    .selection {
+        margin: 0;
+        grid-area: selection;
+        display: grid;
+        a {
+            cursor: pointer;
+            color: var(--mainText);
+        }
+        a:hover {
+            color: var(--lightColor);
+        }
+    }
+
+    .experience-desc {
+        grid-area: experience-desc;
+        ul {
+            list-style: none;
+            padding-left: 25px;
+            list-style-position: outside;
+        }
+
+        ul li::before {
+            content: "\2023";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            color: var(--lightColor); /* Change the color */
+            font-weight: bold; /* If you want it to be bold */
+            display: inline-block; /* Needed to add space between the bullet and the text */
+            width: 1em; /* Also needed for space (tweak if needed) */
+            margin-left: -1em; /* Also needed for space (tweak if needed) */
+          }
+        
+        span {
+            color: var(--lightColor);
+        }
+
+        &#Div1 {
+            display: block;
+        }
+        &#Div2 {
+            display: none;
+        }
+        &#Div3 {
+            display: none;
+        }
+        &#Div4 {
+            display: none;
+        }
+    }
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,320px);
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top:10px;
+}
+
+.project:hover{
+    transform: scale(1.03);
+}
+
+.project-preview {
+    background-color: var(--secondaryColor);
+    border-radius: 20px;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    -webkit-box-shadow: inset 0px 0px 10px -5px rgba(169,17,229,0.5);
+    -moz-box-shadow: inset 0px 0px 10px -5px rgba(169,17,229,0.5);
+    box-shadow: inset 0px 0px 10px -5px rgba(169,17,229,0.5);
+    cursor: default;
+}
+
+.thumbnail-container{
+    position: relative;
+}
+
+.external-link {
+    top:0px; 
+    right:20px;
+    position: absolute;
+
+    .link-items{
+        display: flex;
+        align-items:center;
+        padding: 0;
+        li:not(:last-child) { //apply this to all items in the list except the last item
+            margin-right: 10px;
+        }
+        a {
+            opacity: 0.75;
+        }
+        a:hover {
+            opacity: 1;
+        }
+    }
+
+    img {
+        background: rgba(256, 256, 256, 0.08);
+        border-radius: 8px;
+        filter: invert(1);
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.thumbnail{
+    border-bottom: 1px solid var(--lightColor);
+    display: block;
+    width: 100%; //fill 100% of the container which is .project
+    height:180px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.bottomMenu {
+    display: none;
+}
+
+@media screen and (max-width: 1200px){
+    .main-container{
+        width:95%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    h1 { font-size: 3.375rem;}
+    h2 { font-size: 1.75rem;}
+    h3 { font-size: 1.5rem;}
+
+    .mobile-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+    }
+
+    .mobile-navigation {
+        position: absolute; //its position is in front of other element
+        border: 1px solid var(--lightColor);
+        border-radius: 10px;
+        //grid-template-columns: auto;
+        text-align: right;
+        margin: 0px;
+        padding-right: 20px;
+        width: auto;
+        
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.1);
+        letter-spacing: 2.5px;
+        a {
+            color: var(--mainText);
+        }
+
+        a:hover{
+            color: #fff;
+        }
+
+        &.fade-out{
+            display: none;
+        }
+
+        &.fade-in{
+            display: block;
+        }
+        &.close {
+            display: block;
+        }
+    }
+
+    .fade-in {animation: fade-in 300ms ease-in-out forwards;}
+    @keyframes fade-in {
+        from {
+            visibility: hidden;
+            opacity: 0;
+        }
+        to {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .fade-out {animation: fade-out 300ms ease-in-out forwards;}
+    @keyframes fade-out {
+        from {
+            visibility: visible;
+            opacity: 1;
+        }
+        to {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+ 
+ 
+    .web-navigation{
+        display: none;
+    }
+
+    .hamburger {
+        padding: 20px;
+        display: grid;
+        > span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--mainText);
+            transition: all 0.3s ease-in-out;
+            position: relative;
+    
+            &:not(:last-child){
+                margin-bottom: 5px;
+            }
+        }
+    
+        &.open { //another condition if this class is added to main class in html (for javascript) and it will be 'hamburger open'
+            > span:first-child {
+                transform: translateY(8px) rotate(45deg);
+            }
+    
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+    
+            > span:last-child {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+    }
+
+    .intro-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'nav-wrapper'
+            'mobile-wrapper'
+            'left-col'
+            'right-col'
+        ;
+
+        #profile-pic{
+            margin-top:0;
+        }
+
+        .mobile-wrapper{
+            grid-area: mobile-wrapper;
+        }
+
+        .nav-wrapper{
+            grid-area: nav-wrapper;
+        }
+
+        .left-col{
+            grid-area: left-col;
+            padding-bottom: 0;
+        }
+
+        .right-col{
+            grid-area: right-col;
+            justify-content: center;
+            padding-top:30px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    .experience-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'selection'
+        'experience-desc'
+        ;
+
+        .selection {
+            grid-area: selection;
+        }
+
+        .experience-desc {
+            padding: 0 20px;
+            grid-area: experience-desc;
+        }
+    }
+
+    #footer {
+        margin-bottom: 35px;
+    }
+
+    .bottomMenu {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        position: fixed; //stay in the position eventhough the page is scrolled
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        border-top: 1px solid var(--lightColor);
+        background: var(--secondaryColor);
+        z-index: 1; //higher the value, closer to the screen
+        transition: all 0.5s;
+        ul {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            li {
+                padding-right: 50px;
+                padding-bottom: 20px;
+                a {
+                    color: var(--mainText);
+                }
+            }
+        }
+    }
+    .hide {
+    visibility: hidden;
+    opacity: 0;
+    //bottom: -100%;
+    }
+    .show {
+    visibility: visible;
+    opacity: 1;
+    //bottom: 0;
+    }
+}
