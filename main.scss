@@ -594,14 +594,15 @@ h6 { font-size: 1.125rem;}
         ul {
             margin: 0;
             display: flex;
-            justify-content: center;
+            padding:0;
+            justify-content: space-evenly;
             li {
-                padding-right: 50px;
                 padding-bottom: 20px;
                 a {
                     color: var(--mainText);
                 }
             }
+            //li:not(:last-child) {padding-right: 25px;}
         }
     }
     .hide {
