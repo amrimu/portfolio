@@ -386,6 +386,10 @@ h6 {
   color: var(--lightColor);
 }
 
+.experience-wrapper .mobile-selection {
+  display: none;
+}
+
 .experience-wrapper .experience-desc {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
@@ -524,13 +528,16 @@ h6 {
 
 @media screen and (max-width: 800px) {
   h1 {
-    font-size: 3.375rem;
+    font-size: 2.5rem;
   }
   h2 {
     font-size: 1.75rem;
   }
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+  .greeting-wrapper {
+    min-height: 3em;
   }
   .mobile-wrapper {
     display: -webkit-box;
@@ -691,6 +698,28 @@ h6 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: selection;
+    display: none;
+  }
+  .experience-wrapper .mobile-selection {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: selection;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .experience-wrapper .mobile-selection a {
+    cursor: pointer;
+    color: var(--mainText);
+  }
+  .experience-wrapper .mobile-selection a:hover {
+    color: var(--lightColor);
   }
   .experience-wrapper .experience-desc {
     padding: 0 20px;
@@ -699,7 +728,7 @@ h6 {
     grid-area: experience-desc;
   }
   #footer {
-    margin-bottom: 35px;
+    padding: 0 15px 35px 15px;
   }
   .bottomMenu {
     display: block;

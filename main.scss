@@ -308,6 +308,10 @@ h6 { font-size: 1.125rem;}
         }
     }
 
+    .mobile-selection {
+        display: none;
+    }
+
     .experience-desc {
         grid-area: experience-desc;
         ul {
@@ -421,10 +425,14 @@ h6 { font-size: 1.125rem;}
 }
 
 @media screen and (max-width: 800px){
-    h1 { font-size: 3.375rem;}
+    h1 { font-size: 2.5rem;}
     h2 { font-size: 1.75rem;}
-    h3 { font-size: 1.5rem;}
+    h3 { font-size: 1.25rem;}
 
+    .greeting-wrapper{
+        min-height: 3em;
+    }
+    
     .mobile-wrapper {
         display: flex;
         justify-content: flex-end;
@@ -558,6 +566,7 @@ h6 { font-size: 1.125rem;}
             padding-right: 20px;
         }
     }
+
     .experience-wrapper {
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -567,6 +576,23 @@ h6 { font-size: 1.125rem;}
 
         .selection {
             grid-area: selection;
+            display: none;
+        }
+
+        .mobile-selection {
+            margin: 0;
+            margin-bottom: 15px;
+            padding:0;
+            grid-area: selection;
+            display: flex;
+            justify-content: space-evenly;
+            a {
+                cursor: pointer;
+                color: var(--mainText);
+            }
+            a:hover {
+                color: var(--lightColor);
+            }
         }
 
         .experience-desc {
@@ -576,7 +602,8 @@ h6 { font-size: 1.125rem;}
     }
 
     #footer {
-        margin-bottom: 35px;
+        //margin-bottom: 35px;
+        padding: 0 15px 35px 15px;
     }
 
     .bottomMenu {
