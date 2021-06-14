@@ -1,13 +1,13 @@
 :root {
-    --mainColor: #260433;
-    --secondaryColor: #2f053f;
+    --mainColor: rgb(7, 37, 20);
+    --secondaryColor: rgb(8, 41, 23);
 
-    --lightColor: #a911e5;
+    --lightColor: #32ff7e;
 
-    --mainText:  #d9d4da;
-    --secondaryText: #b5abb6;
+    --mainText:  #e5eeea;
+    --secondaryText: #cdecde;
 
-    --darkColor: #130219;
+    --darkColor: rgb(2, 17, 8);
 
 }
 
@@ -64,11 +64,11 @@ h5 { font-size: 1.2rem;}
 h6 { font-size: 1.125rem;}
 
 ::-moz-selection {
-    background: #462c49;
+    background: rgb(10, 53, 29);
 }
 
 ::selection {
-    background: #462c49;
+    background: rgb(10, 53, 29);
 }
 
 .section-tittle{
@@ -189,9 +189,9 @@ h6 { font-size: 1.125rem;}
     border-radius: 8px;
     background-color: var(--mainColor);
 
-    -webkit-box-shadow: inset 0px 0px 5px -1px rgba(169,17,229,0.8);
-    -moz-box-shadow: inset 0px 0px 5px -1px rgba(169,17,229,0.8);
-    box-shadow: inset 0px 0px 5px -1px rgba(169,17,229,0.8);
+    -webkit-box-shadow: inset 0px 0px 5px -1px var(--lightColor);
+    -moz-box-shadow: inset 0px 0px 5px -1px var(--lightColor);
+    box-shadow: inset 0px 0px 5px -1px var(--lightColor);
 }
 
 #profile-pic:hover{
@@ -366,9 +366,9 @@ h6 { font-size: 1.125rem;}
     border-radius: 20px;
     padding: 20px;
     border-radius: 0 0 20px 20px;
-    -webkit-box-shadow: inset 0px 0px 10px -5px rgba(169,17,229,0.5);
-    -moz-box-shadow: inset 0px 0px 10px -5px rgba(169,17,229,0.5);
-    box-shadow: inset 0px 0px 10px -5px rgba(169,17,229,0.5);
+    -webkit-box-shadow: inset 0px 0px 10px -5px var(--lightColor);
+    -moz-box-shadow: inset 0px 0px 10px -5px var(--lightColor);
+    box-shadow: inset 0px 0px 10px -5px var(--lightColor);
     cursor: default;
 }
 
@@ -412,6 +412,16 @@ h6 { font-size: 1.125rem;}
     height:180px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
+}
+
+.footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+        color:var(--mainText);
+        margin: 15px 0px;
+    }
 }
 
 .bottomMenu {
@@ -603,7 +613,11 @@ h6 { font-size: 1.125rem;}
 
     #footer {
         //margin-bottom: 35px;
-        padding: 0 15px 35px 15px;
+        padding: 0 15px 0px 15px;
+    }
+
+    .footer-wrapper {
+        padding: 0px 0px 35px 0px;
     }
 
     .bottomMenu {

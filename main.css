@@ -1,10 +1,10 @@
 :root {
-  --mainColor: #260433;
-  --secondaryColor: #2f053f;
-  --lightColor: #a911e5;
-  --mainText:  #d9d4da;
-  --secondaryText: #b5abb6;
-  --darkColor: #130219;
+  --mainColor: rgb(7, 37, 20);
+  --secondaryColor: rgb(8, 41, 23);
+  --lightColor: #32ff7e;
+  --mainText:  #e5eeea;
+  --secondaryText: #cdecde;
+  --darkColor: rgb(2, 17, 8);
 }
 
 body * {
@@ -78,11 +78,11 @@ h6 {
 }
 
 ::-moz-selection {
-  background: #462c49;
+  background: #0a351d;
 }
 
 ::selection {
-  background: #462c49;
+  background: #0a351d;
 }
 
 .section-tittle {
@@ -234,8 +234,8 @@ h6 {
   border: 2px solid var(--lightColor);
   border-radius: 8px;
   background-color: var(--mainColor);
-  -webkit-box-shadow: inset 0px 0px 5px -1px rgba(169, 17, 229, 0.8);
-  box-shadow: inset 0px 0px 5px -1px rgba(169, 17, 229, 0.8);
+  -webkit-box-shadow: inset 0px 0px 5px -1px var(--lightColor);
+  box-shadow: inset 0px 0px 5px -1px var(--lightColor);
 }
 
 #profile-pic:hover {
@@ -460,8 +460,8 @@ h6 {
   border-radius: 20px;
   padding: 20px;
   border-radius: 0 0 20px 20px;
-  -webkit-box-shadow: inset 0px 0px 10px -5px rgba(169, 17, 229, 0.5);
-  box-shadow: inset 0px 0px 10px -5px rgba(169, 17, 229, 0.5);
+  -webkit-box-shadow: inset 0px 0px 10px -5px var(--lightColor);
+  box-shadow: inset 0px 0px 10px -5px var(--lightColor);
   cursor: default;
 }
 
@@ -514,6 +514,23 @@ h6 {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px 20px 0 0;
+}
+
+.footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-wrapper p {
+  color: var(--mainText);
+  margin: 15px 0px;
 }
 
 .bottomMenu {
@@ -728,7 +745,10 @@ h6 {
     grid-area: experience-desc;
   }
   #footer {
-    padding: 0 15px 35px 15px;
+    padding: 0 15px 0px 15px;
+  }
+  .footer-wrapper {
+    padding: 0px 0px 35px 0px;
   }
   .bottomMenu {
     display: block;
