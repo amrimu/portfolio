@@ -1,3 +1,4 @@
+// Hamburger Menu
 const menu = document.querySelector('.hamburger')
 const menuLinks = document.querySelector('.mobile-navigation')
 
@@ -24,8 +25,10 @@ menu.addEventListener('click', function () {
     menuLinks.classList.remove('active'); */
 })
 
+// Experience section
 var divs = ['Div1', 'Div2', 'Div3', 'Div4']
 var visibleDivId = null
+
 function divVisibility(divId) {
   if (visibleDivId === divId) {
     //visibleDivId = null;
@@ -48,6 +51,8 @@ function hideNonVisibleDivs() {
   }
 }
 
+
+// Bottom menu on mobile devices
 myID = document.getElementById('myID')
 
 var myScrollFunc = function () {

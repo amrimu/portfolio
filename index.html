@@ -17,13 +17,13 @@
     
     <!-- About Me -->
     <section class="s1">
-        <div class="main-container">
+        <div class="main-container"> <!-- to tidy up all sections -->
 
             <div class="greeting-wrapper">
-                <h1>hey, <span>loki</span> here<span id="cursor">|</span></h1>
+                <h1>hey, <span>Loki</span> here<span id="cursor">|</span></h1>
             </div>
             
-            <div class="intro-wrapper" id="about">
+            <div class="intro-wrapper">
                 <div class="nav-wrapper">
                     <div class="title-wrapper">
                         <h2>/ about me</h2>
@@ -35,6 +35,7 @@
                         <li><a href="#contact">.contact()</a></li>
                     </ul>
                     
+                    <!-- display on small devices -->
                     <a href="#" class="hamburger">
                         <span></span>
                         <span></span>
@@ -52,10 +53,10 @@
 
                 <div class="left-col">
                     <img id="profile-pic" src="images/loki.jfif" alt="profile-picture">
-                    <ul id="first-icon" class="social-icon">
-                        <li><a href="https://github.com/" target="_blank"><i class="fab fa-github fa-lg"></i></a></li>
-                        <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a></li>
-                        <li><a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
+                    <ul class="social-icon first-icon">
+                        <li><a href="#" target="_blank"><i class="fab fa-github fa-lg"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
                     </ul>
                     <a class="say-hello" href="mailto:mynameis@loki.com">Say hello</a>
                 </div>
@@ -87,60 +88,58 @@
 
     <!-- Experience -->
     <section class="s2">
-        <div class="main-container">
-            <div id="experience">
-                <h2 class="section-tittle">/ experience</h2>
-                <div class="experience-wrapper">
-                    <ul class="selection">
-                        <li><a onclick="divVisibility('Div1')">Company 1</a></li>
-                        <li><a onclick="divVisibility('Div2')">Company 2</a></li>
-                        <li><a onclick="divVisibility('Div3')">Company 3</a></li>
-                        <li><a onclick="divVisibility('Div4')">Company 4</a></li>
-                    </ul>
+        <div class="main-container" id="experience">
+            <h2 class="section-tittle">/ experience</h2>
+            <div class="experience-wrapper">
+                <ul class="selection">
+                    <li><a onclick="divVisibility('Div1')">Company 1</a></li>
+                    <li><a onclick="divVisibility('Div2')">Company 2</a></li>
+                    <li><a onclick="divVisibility('Div3')">Company 3</a></li>
+                    <li><a onclick="divVisibility('Div4')">Company 4</a></li>
+                </ul>
 
-                    <ul class="mobile-selection">
-                        <li><a onclick="divVisibility('Div1')">.01</a></li>
-                        <li><a onclick="divVisibility('Div2')">.02</a></li>
-                        <li><a onclick="divVisibility('Div3')">.03</a></li>
-                        <li><a onclick="divVisibility('Div4')">.04</a></li>
+                <ul class="mobile-selection">
+                    <li><a onclick="divVisibility('Div1')">.01</a></li>
+                    <li><a onclick="divVisibility('Div2')">.02</a></li>
+                    <li><a onclick="divVisibility('Div3')">.03</a></li>
+                    <li><a onclick="divVisibility('Div4')">.04</a></li>
+                </ul>
+
+                <div class="experience-desc" id="Div1">
+                    <h3>Software Engineer @ <span>Company 1</span></h3>
+                    <p>JAN 21 - JUN 21</p>
+                    <ul>
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi eum repudiandae, voluptatum quam rem magnam quia possimus libero dolor laudantium.</li>
+                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae deserunt debitis corporis accusantium quae unde.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas perferendis non suscipit tempora expedita at voluptatibus eum a.</li>
                     </ul>
-    
-                    <div class="experience-desc" id="Div1">
-                        <h3>Software Engineer @ <span>Company 1</span></h3>
-                        <p>JAN 21 - JUN 21</p>
-                        <ul>
-                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi eum repudiandae, voluptatum quam rem magnam quia possimus libero dolor laudantium.</li>
-                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae deserunt debitis corporis accusantium quae unde.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas perferendis non suscipit tempora expedita at voluptatibus eum a.</li>
-                        </ul>
-                    </div>
-                    <div class="experience-desc" id="Div2">
-                        <h3>Software Engineer @ <span>Company 2</span></h3>
-                        <p>JUL 20 - DEC 20</p>
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis fuga harum ducimus, suscipit omnis odit.</li>
-                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, adipisci nostrum! Odit quod tempora harum iure ipsa porro in quae consequuntur ea.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, distinctio laudantium illum rerum quo facilis eligendi.</li>
-                        </ul>
-                    </div>
-                    <div class="experience-desc" id="Div3">
-                        <h3>Software Engineer @ <span>Company 3</span></h3>
-                        <p>JAN 20 - JUN 20</p>
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ducimus rem temporibus nam recusandae. Molestias optio impedit cum, voluptatem reprehenderit voluptates ducimus!</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nemo fugit nam similique delectus.</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia obcaecati mollitia, accusamus unde eum debitis aliquid fuga doloremque ab perferendis. </li>
-                        </ul>
-                    </div>
-                    <div class="experience-desc" id="Div4">
-                        <h3>Software Engineer @ <span>Company 4</span></h3>
-                        <p>JUL 19 - DEC 19</p>
-                        <ul>
-                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, nam aliquid! Vero placeat blanditiis voluptatum magni consequatur!</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae suscipit voluptatum rerum eius dolore quod labore.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iusto fuga odit obcaecati culpa neque autem quos amet.</li>
-                        </ul>
-                    </div>
+                </div>
+                <div class="experience-desc" id="Div2">
+                    <h3>Software Engineer @ <span>Company 2</span></h3>
+                    <p>JUL 20 - DEC 20</p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis fuga harum ducimus, suscipit omnis odit.</li>
+                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, adipisci nostrum! Odit quod tempora harum iure ipsa porro in quae consequuntur ea.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, distinctio laudantium illum rerum quo facilis eligendi.</li>
+                    </ul>
+                </div>
+                <div class="experience-desc" id="Div3">
+                    <h3>Software Engineer @ <span>Company 3</span></h3>
+                    <p>JAN 20 - JUN 20</p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ducimus rem temporibus nam recusandae. Molestias optio impedit cum, voluptatem reprehenderit voluptates ducimus!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nemo fugit nam similique delectus.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia obcaecati mollitia, accusamus unde eum debitis aliquid fuga doloremque ab perferendis. </li>
+                    </ul>
+                </div>
+                <div class="experience-desc" id="Div4">
+                    <h3>Software Engineer @ <span>Company 4</span></h3>
+                    <p>JUL 19 - DEC 19</p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, nam aliquid! Vero placeat blanditiis voluptatum magni consequatur!</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae suscipit voluptatum rerum eius dolore quod labore.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iusto fuga odit obcaecati culpa neque autem quos amet.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -162,7 +161,7 @@
                             </ul>
                         </div>
                     </div> 
-                       
+                
                     <div class="project-preview">
                         <h3 class="project-title">Project 1</h3>
                         <p class="project-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus provident quod quia nisi aliquam atque voluptatem suscipit, doloremque consequatur quis.</p>
@@ -260,12 +259,12 @@
     </section>
 
     <!-- Contact -->
-    <footer id="footer"class="s2">
+    <footer class="s2 footer">
         <div class="main-container">
             <div id="contact">
                 <h2 class="section-tittle">/ get in touch</h2>
                 <p>For business inquiry please send email to <a href="mailto:mynameis@loki.com">mynameis@loki.com</a></p>
-                <ul id="second-icon" class="social-icon">
+                <ul class="social-icon second-icon">
                     <li><a href="https://github.com/" target="_blank"><i class="fab fa-github fa-lg"></i></a></li>
                     <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a></li>
                     <li><a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
@@ -274,12 +273,13 @@
         </div>
     </footer>
 
-    <footer id="footer" class="s1">
+    <footer class="s1 footer">
         <div class="footer-wrapper">
             <p>Made with  &#128154 by Amri Mufti</p>
         </div>
     </footer>
 
+        <!-- Menu for Mobile -->
     <div id="myID" class="bottomMenu">
         <ul>
             <li><a href="#">About</a></li>
